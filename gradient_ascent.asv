@@ -37,7 +37,7 @@ function gradient_ascent(use_sim, position, heading)
         neatov2.plotSim();
     end
     
-    points = [];
+    
     % Steepest ascent loop
     while true
         grad_x = grad_f_x(position(1), position(2));
@@ -50,7 +50,6 @@ function gradient_ascent(use_sim, position, heading)
 
         direction = grad / norm(grad); % Direction of steepest ascent
         position = position + step_size * direction; % Move in that direction
-        points(size(points, 1) + 1, :) = position;
 
         if use_sim
             neatov2.setPositionAndOrientation(position(1), position(2), atan2(direction(2), direction(1)));
@@ -62,12 +61,7 @@ function gradient_ascent(use_sim, position, heading)
     syms x y
     f_sym = 8*exp(-1.5*(x + y - 0.75).^2 - 0.5*(x - y - 0.75).^2) + 6*exp(-(x + 0.75).^2 - (y + 0.25).^2);
     zvals = double(subs(f_sym, {x, y}, {xvals, yvals}));
-    %theoretical trajectory plot
     f = figure;
     contour(xvals, yvals, zvals, 20);
-    hold on
-    plot(points(:, 1), points(:, 2))
-    text(points(1, 1), points(1, 2), "\leftarrow Start")
-    text(points(end, 1), points(end, 2), "\leftarrow End")
 end
 
