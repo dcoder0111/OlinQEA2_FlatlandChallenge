@@ -12,8 +12,8 @@ This repository contains the MATLAB code and associated files for the flatland p
 - `neato.m`: A MATLAB script provided by the instructor for Neato robot simulation.
 - `NeatoSensors.m`: A MATLAB function provided by the instructor to simulate Neato robot sensors.
 - `neatoSim.m`: A MATLAB script provided by the instructor for simulating the Neato robot.
-- `gradient_ascent.m`: A MATLAB script that runs a gradient ascent agorithm for the Neato robot.
-- `run_neato.mlx`: A Matlab live script that runes `gradient_ascent.m`.
+- `gradient_ascent.m`: A MATLAB script that runs a gradient ascent algorithm for the Neato robot.
+- `run_neato.mlx`: A Matlab live script that runs `gradient_ascent.m`.
 - `run_neato.pdf` : A PDF file with a captured output from `run_neato.mlx`.
 
 ## Usage
